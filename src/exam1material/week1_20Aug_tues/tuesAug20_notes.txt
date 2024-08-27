@@ -320,3 +320,21 @@ Homework 1: due Tuesday, August 27
     - second page is logic puzzles
 
 Next: finish logic puzzles, start truth tables
+
+
+
+
+
+
+Examole problems in class:
+
+Sara: Bill is a knight
+Bill:  Mae is a knight
+Mae: Bill will tell you I'm a knave
+
+Suppose Sara is a knight, then Bill would be a knight, and Mae would have to be a knight.
+Mae's statement doesnt work because it directly opposes what Bill does say. x
+
+Sara: knave
+Bill: knave
+Mae: knave
