@@ -1,0 +1,23 @@
+//@Logika: --background type
+
+
+//@Logika: --background type
+
+// p -> q
+
+         *
+----------------
+p q # p -> : q
+----------------
+T T # T   T   T
+T F # T   F   F
+F T # F   F   T
+F F # F   T   F
+----------------
+
+Contingent
+T:
+F:
+
+The are only equivalent if both truth tables
+have the same output for all of the sam inputs.
