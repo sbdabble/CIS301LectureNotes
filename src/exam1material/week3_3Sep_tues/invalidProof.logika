@@ -3,15 +3,16 @@
 //premises: p → q, q
 //Conclusion: p
 
+//INVALID argument
 
+         *      *     *
 -------------------------
 p q # (p ->: q, q) |- p
 -------------------------
-T T #
-T F #
-F T #
-F F #
+T T #    T      T     T
+T F #    F      F     T
+F T #    T      T     F
+F F #    T      F     F
 -------------------------
 
-invalid argument can be proved if all of the premises are rue and yet the
-conclusion is returned as false.
+Invalid [F T]
