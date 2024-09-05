@@ -13,7 +13,9 @@ import org.sireum.justification.natded.prop._
     Deduce(
         (a & b, c) |- (b & c)
         Proof(
-            //PROOF GOES HERE
+            1 (a & b) by Premise,
+          2 (c) by Premise,
+
 
         )
     )

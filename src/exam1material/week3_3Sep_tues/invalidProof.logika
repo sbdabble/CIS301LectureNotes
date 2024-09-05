@@ -12,3 +12,6 @@ T F #
 F T #
 F F #
 -------------------------
+
+invalid argument can be proved if all of the premises are rue and yet the
+conclusion is returned as false.

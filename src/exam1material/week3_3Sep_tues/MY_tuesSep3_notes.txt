@@ -16,7 +16,7 @@ Homework 1: common mistakes
     - Chipotle doesn't raise their prices
 
     (what is being promised?)
-
+No promises, no conclusions
 
 
 y = 0;
@@ -67,20 +67,24 @@ one truth assignment that makes the statement true
 
 - what kind of statement is satisfiable? what kind is not?
 
-
+Tautology and Contingents
+NOT Contradictory
 
 
 Example: (p → ¬q) → r
 
 Is it satisfiable? How could we show it?
 
+p: T
+q: F
+r: T
 
-
-
+This is just one satisfiable truth assignment
 
 Is (p V q) ^ ¬p ^ ¬q satisfiable?    How could we show it?
 
-
+Not satisfiable, this is contradictory since p or q must be both true AND false to satisfy the conditions
+In order to definitively prove unsatisfiable: must provide the entire truth table.
 /////////////////////////////////
 
 Proving an argument.
@@ -92,6 +96,11 @@ Proving an argument.
 
 
 --> What do we want to show?
+
+every time all the premises are true, then the conclusions are also true.
+do not care about the times when all of the premises are not satisfied.
+
+make truth tables where the conclusion always follows the true premises.
 
 ///
 
@@ -111,13 +120,31 @@ I want to prove:
 
 --> How would we translate to propositional logic?
 
+p: I am in the CS department
+q: I am in the ECE department
+r: I can log in to the CS lab computers
 
 
 Translations:
 
+p || q
+!q
+p->r
 
 --> How might we prove this with truth tables?
-
+            *     *    *
+---------------------------------
+p q r # ( p || q, !q, p ->:r )
+---------------------------------
+T T T
+T F T
+T T F
+T F F
+F T T
+F F T
+F T F
+F F F
+---------------------------------
 
 --> what idea do we want to demonstrate?
 
@@ -260,6 +287,9 @@ AND rules idea.
 
    --> in what situations do you think we could do that?
 
+P
+Q
+this is an and introduction
 
 
 
@@ -269,7 +299,9 @@ AND rules idea.
     --> what new claims would make sense using that statement?
 
 
-
+P
+Q
+and eliminations - breaking the statement apart
 
     --> what happened to the AND operator in both cases?
 
@@ -395,3 +427,7 @@ Next time:
 - Using natural deduction to prove two statements are equivalent
 - Equivalent if-statements
 - If time, implies rules in natural deduction
+
+
+
+Turnstile operator : |-
