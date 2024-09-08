@@ -46,6 +46,10 @@ AndI : ---------
 AndE1 : ---------   AndE2 : ---------
            P                    Q
 
+
+AndI(LineNum1, LineNum2) [proof format]
+AndE(LineNum1, LineNum2) [proof format]
+
 //////////////////////////////////
 
 Reminder: natural deduction proof syntax:
@@ -59,7 +63,11 @@ Proof(
     ...
     10 (  conclusion    ) by Justification
 )
+use the "Premise" Justification if it is one of the given PREMISE statemnts
 
+Premise
+AndI
+AndE1 AndE2
 
 --> what justifications so far?
 
@@ -84,7 +92,9 @@ p ∧ q ∧ r ⊢ q
 
 Prove that ∧ is commutative
 
+p & q |- q & p
 --> what does "commutative" mean?
+Order does not matter!
 
 (and4.sc)
 
@@ -99,7 +109,7 @@ OrI1 : ---------        OrI2 : ---------
         P ∨ Q                   P ∨ Q
 
 
-
+E1 and !2 determine the position in which the or is placed.
 
 Syntax:
 
@@ -129,7 +139,7 @@ Proof(
 
 ///////////////////////////////////////////
 
-OR elimination
+OR elimination - subpoofs
 
 
 Idea:
@@ -137,9 +147,17 @@ Idea:
 
 p ∨ q
 
+maybe p is true
+maybe q is tru
+at lead one is true, ,maybe both.
 
 
+If both above come back true, then the nee clain im true
+needs a provided subproof
 
+estab;ish that (some reult) can be achieved through both the if and tthe else of a statement.
+
+Subproof() creates a new reai=asing soace.
 
 - What if we can reach the same conclusion no matter which side
     of the OR is true?
@@ -264,7 +282,3 @@ if (grade >= 80 || extraCredit == true) {
 Next time:
 - Rules for implies operator (these WILL be on exam 1!)
 - Review for exam
-
-SubProof(p&q)
-Dubdptoof(q and r and w
-SUBPEOOF)
