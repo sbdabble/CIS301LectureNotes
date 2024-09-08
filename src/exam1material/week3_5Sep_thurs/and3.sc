@@ -13,10 +13,9 @@ import org.sireum._
 
     (p & q & r) |- (q)
       Proof(
-
-      //PROOF GOES HERE
-
-
+      1 ((p & q & r)) by Premise,
+      2 (p & q) by AndE1(1), /// andE1 isolates the first side of the statement
+      3 (q) by AndE2(2)
     )
     //@formatter:on
   )

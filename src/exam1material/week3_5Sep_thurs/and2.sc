@@ -14,10 +14,14 @@ import org.sireum._
     (p, q, r) |- (r & (q & p))
       Proof(
 
-      //PROOF GOES HERE
+      1 (p) by Premise,
+      2 (q) by Premise,
+      3 (r) by Premise,
+      4 (q & p) by AndIntroduction(2,1), ///Introducing an AND operation intot eh proof
+      5 ((r & (q & p)) by AndI(3,4))
 
 
-    )
+    )Ï
     //@formatter:on
   )
 }

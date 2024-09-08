@@ -14,10 +14,22 @@ import org.sireum._
     (p | q) |- (q | p)
       Proof(
 
-      //PROOF GOES HERE
-
-
+      1 ((p | q)) by Premise,
+      2 SubProof2(
+      3 (Assume(p)),
+      4 (q|p) by OrI2(3)),
+      5 SubProof3(
+        5(q),
+        (q| 0))
     )
+    (q|p) by OrE()by OrI2(1, 3; 5
+
+
+
+
+  )
     //@formatter:on
   )
 }
+
+can only prov ronbaalid w a  proof table

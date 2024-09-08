@@ -15,7 +15,10 @@ import org.sireum._
      ((p | q) & (p | r)) |- (p | (q & r))
       Proof(
 
-      //PROOF GOES HERE
+     Proof(
+       1 ((p | q) & (p | r)) by Premise,
+       2 (P | q) by AndE1
+     )
 
 
     )
