@@ -17,3 +17,6 @@ import org.sireum.justification.natded.prop._
     //@formatter:on
   )
 }
+
+// Reverse the truth table/proof tp see
+// if the opposite is also true for the same cases, exclusively.

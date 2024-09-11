@@ -13,7 +13,14 @@ import org.sireum.justification.natded.prop._
         1 ( p __>: r )  by Premise,
         2 ( q __>: r ) by Premise,
         3 ( p | q ) by Premise,
+      4 (q) by ImplyE(2,3),
+      5 (p ^q) by AndeI1
+        .....
     )
     //@formatter:on
   )
 }
+
+| subproof to assume a value on either side,
+OR elimination  will reunite two r sttments nd create a full arguent,
+''

@@ -124,6 +124,7 @@ Example (imply2.logika):
 p → r,  q → r,  p ∨ q  ⊢ r
 
 
+
 ////////////////////////////////////////
 
 (This ends the new material for Exam 1)
@@ -142,7 +143,7 @@ See Canvas announcement for list of topics.
 
 
 How to prove two propositional logic statements are equivalent?
-
+Natural Deductionm Prove the sequent premises
 
 How to prove propositional logic statements are NOT equivalent?
 
@@ -151,10 +152,10 @@ How to prove propositional logic statements are NOT equivalent?
 What is satisfiability?
 
     how prove a statement is satisfiable?
-
+find when all the premises are tru and the conlci==ucion is true.
 
     how prove a statement is not satisfiable?
-
+Truth table proving no combination makes thm true.
 
 
 - Determining whether an argument is valid or invalid
@@ -163,7 +164,8 @@ What is satisfiability?
     how prove valid?
 
     how prove invalid?
-
+just need one truth assignment where alll of the premises are true,
+but the conclusion is false.
 
 
 /////////////////////////////////////////
@@ -181,3 +183,26 @@ Some problems will ask for a proof or explanation --
 ////////////////////////////////////////
 
 See previous exam.
+
+ewuivalence: truth tbal eir boith statemntst  matches
+arguments.
+
+Ant equiz : nanto turth able deductions.
+
+Cannot prove ntot eauivalent w anti-deduction.
+
+Satisfiablitilty at la one truth assignmen t tsy makes it true,
+
+
+Step one: pull in premises
+Step two: separate out atoms
+Step 3 : combine
+step 4 proof.
+
+When confronted with OR, must assume both sides (a||b) to further the proof.
+Know your goal, it will help direct you.
+in an ORE, have 3 oarameters, takes in original statement, then the subprooofs.
+
+or eliminating the unture premses
+
+"the two statemetnss are equiv because for every possible innot, they have the same output. "
