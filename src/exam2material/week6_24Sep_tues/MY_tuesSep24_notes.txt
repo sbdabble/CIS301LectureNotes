@@ -18,7 +18,7 @@ Hardest problems: proving equivalence on #6 and #7
 
     p ∧ ¬q   ⊢   ¬(p → q)
 
-
+// Recall BottomE
 
 HW 5 will be posted after class, due Tues Oct 1
 
@@ -38,13 +38,16 @@ How do we approach proofs?
 2. Extract all information from premises (AndE, ImplyE)
 3. Look at what you are trying to prove (find top level operator)
 
-    ∧ -
+    ∧ - usually prove the two sides separately, then use AndI
 
-    ∨ -
+    ∨ - prove the same outcome with different assumptions, prove them(the sides) by themselves
+        Try OrE to get conclusion on both cases. PbC is great sometimes w the negation involved
+        where you assume !(conclusion) and break it down from there.
 
-    → -
+    → - Assume LHS in pursuit of RHS
 
-    ¬(something) -
+    ¬(something) - NegI pattern, assume smthg on a subproof,
+    try to get contradiction
 
     just a propositional atom?
         look for where that atom IS in your premises
@@ -68,9 +71,13 @@ Doesn't fit a pattern or doesn't work out from above:
     (something) ∨ ¬(something).
     Use OrE on it.
 
-
+// ALWYAS wrote down the goal of a SubProof.
 
 --> when do we open a subproof?
+ImplyI
+OrE - only back to back douple subproof.
+PbC
+NegI
 
 
 
@@ -79,7 +86,7 @@ Doesn't fit a pattern or doesn't work out from above:
 --> can we assume anything? yes....but, needs to fit
     pattern of one of the 4 to finish the subproof.
 
-
+can assume anything in a goven subproof- just neerd to maatch sn enf with the point.
 
 /////////////////////////////////
 

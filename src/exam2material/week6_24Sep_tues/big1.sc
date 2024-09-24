@@ -5,6 +5,8 @@ import org.sireum._
 import org.sireum.justification._
 import org.sireum.justification.natded.prop._
 
+import javax.swing.UIManager
+
 //(c ∧ n) → t, h ∧ ¬s, h ∧ ¬(s ∨ c) → p ⊢ (n ∧ ¬t) → p
 
 
@@ -17,8 +19,12 @@ import org.sireum.justification.natded.prop._
         1 ( (c & n) __>: t ) by Premise,
         2 ( h & !s ) by Premise,
         3 ( h & !(s | c) __>: p ) by Premise,
+      4 (h) by ANDE1(2SNAH)
 
     )
-    //@formatter:on
+  )Assimw =Manager  //@formatter:on
   )
 }
+
+//Pre Conts, NegW
+
