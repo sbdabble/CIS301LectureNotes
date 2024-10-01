@@ -25,14 +25,14 @@ Today:
 Evaluating predicate logic statements
 
 1) ∀ x P(x)
-    translation:
-    true when:
-    false when:
+    translation: All x are P-ish
+    true when: ALL x is P-ish
+    false when: there is ONE x that is not P-ish
 
 2) ∃ x P(x)
-    translation:
-    true when:
-    false when:
+    translation: There is an x that is P-ish
+    true when: there is at least one x that can be proven P-ish
+    false when: ALL x is NOT P-ish
 
 3) ¬(∀ x P(x))
     translation:
@@ -66,8 +66,13 @@ Translate/evaluate:
     ¬(∀ x (IsVegan(x) → IsPlant(x)))
 
     ¬(∃ x (IsSweet(x) ⋀ IsMeat(x)))
+    There does not exist a meat that is sweet
+true - there is no food that is both meant and also sweet. 
 
     ∃ x ¬(IsSweet(x) ⋀ IsMeat(x))
+    There exists a sweet that is nether sweet nor a meat
+    true - Crackers be meatless adn sweetless. 
+    
 
 //////////////////////
 
@@ -79,19 +84,23 @@ What do these mean in English? Are they true?
 
 ∀ n ∃ m (n^2 < m)
 
-
+The square of all integers is less than some other integer. 
+True, m can just be picked to be one bigger, 
+no end tot eh integers. m could be n^2 +1
 
 ∀ x ∃ y (x == y^2)
 
-
+All integers are a perfect square
+False - not all ints are perfect squares.
+For instance, 5 is not a perfect square.
 
 ¬(∀ n ∃ m (n^2 < m))
 
-
+Not all squares of some integer are less than some other integer. 
 
 ¬(∀ x ∃ y (x == y^2))
 
-
+Not all integers are perfect squares
 
 /////////////////////////
 
@@ -107,16 +116,16 @@ The sum of two negative integers is negative
 
 Domain: ℤ
 
-
-
+∀ x ∀ y (x < 0 ⋀ y < 0 → x + y < 0)
+True. Adding two negative numbers cant get bigger
 
 The difference of two positive integers is
 not necessarily positive
 
     x - y
 
-
-
+∃ x ∃ y (x > 0 ⋀ y > 0 ⋀ x - y < 0)
+can also do negation route
 
 
 /////////////////////////
@@ -141,9 +150,9 @@ suppose our domain is k1 through kn
 
 ///////////////////////////////////////
 
-Equivalence: DeMorgan's law (part 2).
+Equivalence: DeMorgan's law (part 2). - may use demorans law and simlificaationn. 
 
-¬(∀ x P(x))       ∃ x (¬P(x))
+¬(∀ x P(x)) x (¬P(x))
 
 
 suppose our domain is k1 through kn
@@ -247,7 +256,7 @@ Premises: ∀ x P(x) : everyone in my domain is P-ish
 Conclusion: ∃ x P(x): there is someone in domain who is P-ish
 
 Valid or not?
-
+think of an empty set here-: teh premises are true butht he consludion  is falde. 
 
 
 /////////////////////////////////
@@ -272,7 +281,7 @@ In Logika, ∀ x P(x) is written as:
 
     ∀ ((x: T) => P(x))
 
-
+T type specification
 
 In Logika, ∃ x P(x) is written as:
 
@@ -449,6 +458,8 @@ Next time:
 - continue with for all quantifier example
 - proofs and equivalences with the existential quantifier
 
+
+monkey see, monkey 
 
 
 
