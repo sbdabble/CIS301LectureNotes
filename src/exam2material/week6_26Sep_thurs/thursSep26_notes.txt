@@ -90,9 +90,9 @@ What do we know if A - B = A?
 
 What do we know if A - B = B - A?
 
+The sets are the same (think overlap to empty set)
 
-
-
+#dont do algebra on sets
 
 
 //////////////////////////////////////
@@ -106,13 +106,13 @@ B = {2,3,4,5,6,7}
 
 Find:
 
-A ⋃ B =
+A ⋃ B = {1,3,7,10,11,12} & {2,3,4,5,6,7}
 
-A ⋂ B =
+A ⋂ B = {3,7}
 
-A - B =
+A - B = {1,10,11,12}
 
-B - A =
+B - A = {2,4,5,6}
 
 
 //////////////////
@@ -133,7 +133,7 @@ B = {1,3,5,8}
 
 --> is A a subset of B?
 
-
+no - the four in a is not on b
 
 A = {8,1,3}
 
@@ -141,7 +141,7 @@ B = {1,3,5,8}
 
 --> is A a subset of B?
 
-
+yes, all the elements in a are from b
 
 //////////////////////////////////
 
@@ -158,12 +158,12 @@ Can we define whether set A is a subset of set B using quantifiers?
 
 A ⊆ B means ??
 
-
+∀ x ∈ A __>: x ∈ B
 
 
 How could we define whether set A equals set B using quantifiers?
 
-
+(∀ x ∈ A __>: x ∈ B) ⋀ (∀ x ∈ B __>: x ∈ A)
 
 
 ∀ ∃     ∈ ∉     ∅ ⋂ ⋃ ⊂ ⊆   ⋀ ⋁ ¬ →     ℕ ℤ     ≠ ≤ ≥
@@ -194,7 +194,7 @@ Example:
 
 A = {x : x ∈ ℕ ⋀ x^2 ≥ 25 }
 
-
+all natural numbers whose square is greater than 25
 
 P(x) = x ∈ ℕ ⋀ x^2 ≥ 25
     so A = {x : P(x) is true }
@@ -202,13 +202,13 @@ P(x) = x ∈ ℕ ⋀ x^2 ≥ 25
 
 What are these saying? Are they true?
 
-P(2) =
-P(-6) =
-P(10) =
+P(2) = F square is not greater than 25
+P(-6) = F -6 is not a natural number
+P(10) = T satisfies set
 
 Is 2 in A? Is -6? Is 10?
 
-
+10
 
 //////////////////////////////////////
 
@@ -233,6 +233,7 @@ r: Socrates is mortal
 
 
 p, q ⊢ r
+Can't draw any conclusions from propositional logic, turn to predicate logic
 
 
 
@@ -261,11 +262,11 @@ Example:
     Jill is taking: CIS 301, MATH 510, HIST 251, MUSIC 170
 
 
-    What is the value of C(Bob)?
+    What is the value of C(Bob)? false, bob is not in 301
 
-    What is the value of C(Jill)?
+    What is the value of C(Jill)? true, Jill is in 301
 
-    What is the value of C(Bob) ⋀ C(Jill)?
+    What is the value of C(Bob) ⋀ C(Jill)? False (standard and statement)
 
 
 ////////////////
@@ -280,11 +281,12 @@ Peel(x): x has a peel (that needs to be removed before eating)
 Seeds(x): x contains inedible seeds
 Bite(x): f is bite-sized
 
-Berry(strawberry) -
-Citrus(strawberry) -
-Peel(strawberry) -
-Seeds(strawberry) -
-Bite(strawberry) -
+non-scientific berry classifications
+Berry(strawberry) - ya
+Citrus(strawberry) - ya
+Peel(strawberry) - nah
+Seeds(strawberry) - nah
+Bite(strawberry) - ya
 
 
 
@@ -292,8 +294,8 @@ Write each statement in English. Is each one true or false?
 
 ∀ x (Berry(x))
 
-
-
+for all fruits (domain), x is a berry // All fruits are berries - write it all out more naturally
+but this is false, there are fruits that are non-berry
     --> how could we express the same statement in our domain
     WITHOUT a quantifier?
 
@@ -304,10 +306,11 @@ Write each statement in English. Is each one true or false?
 
 ∃ x (Citrus(x) ⋀ Seeds(x))
 
-
+True, oranges : there esists a fruit that is both a citrus and has inedible seeds.
 
     --> how could we express the same statement in our domain
     WITHOUT a quantifier?
+
 
 
 
@@ -315,24 +318,26 @@ Write each statement in English. Is each one true or false?
 
 ∀ x (Berry(x) ⋀ Bite(x))
 
-
+strawberry
 
 
 ///
 
 ∀ x (Berry(x) → Bite(x))
 
+all berries do be bite sizing maybe
+false - apples do exist. and other stuff.
 
-
+vacuousliy true when the promise doe not come up.
 ///
 
 ¬(∀ x Peel(x))
 
 Can you think of another way to write the same thing?
 
+not all fruits need to be peeled
 
-
-
+treu, for intance strawberrries.
 
 
 
@@ -348,7 +353,7 @@ Can you think of another way to write the same thing?
 
 ∀ x ¬Peel(x)
 
-
+not all fruits w edible deed are citru, like a Apple)
 
 
 ///
