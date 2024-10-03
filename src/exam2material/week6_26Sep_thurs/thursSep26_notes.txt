@@ -14,23 +14,28 @@ Reminder: set-builder notation
 {x : a condition involving x}
 
 
-{x : x = 2^k, k ∈ ℕ}
+{x : x = 2k+5, k ∈ ℕ, k ≤ 3}
+
+{7, 9, 11}
 
 ////////////////////////
 
 Describe these sets in set builder notation
 
 
-{5,10,15}
+{5,10,15,20,25, ...}
 
+{x : x = 5k, k ∈ ℕ}
 
 
 {CIS 115, CIS 200, CIS 300, CIS 301}
 
+{x : x is CIS course and x is in the CIS minor}
 
 
 {2,4,8,16,32}
 
+{x : x = 2^k, k ∈ ℕ, k ≤ 5}
 
 ///////////////////////////////////////
 ∀ ∃     ∈ ∉     ∅ ⋂ ⋃ ⊂ ⊆   ⋀ ⋁ ¬ →     ℕ ℤ     ≠ ≤ ≥
@@ -40,12 +45,12 @@ Describe these sets in set builder notation
 Set union, ⋃
 
 The union of the sets A and B, written A ⋃ B, is the set
-of all elements....?
+of all elements....that are in either A or B.
 
 
 How could we express in set builder notation?
 
-A ⋃ B =
+A ⋃ B = {x : x ∈ A ⋁ x ∈ B}
 
 
 //////////////////////////////////////
@@ -55,44 +60,35 @@ A ⋃ B =
 Set intersection, ⋂
 
 The intersection of the sets A and B, written A ⋂ B, is the set
-of all elements that are...?
+of all elements that are...in both A and B
 
 
 How could we express in set builder notation?
 
-A ⋂ B =
+A ⋂ B = {x : x ∈ A ⋀ x ∈ B}
 
 ///////////////////////////////////////
 
-Set difference,
+Set difference, -
 
-/ or \ (means the same thing)
 
 The difference between the sets A and B, written A - B, is the set
-of all elements...?
+of all elements...all elements in A that not also in B
+
+           Can also be written: / or \
+
 
 
 How could we express in set builder notation?
 
-A - B =
-
-
-/////////////////////////////////////
-
-What do we know if A ⋂ B = A ⋃ B?
-
-
-
-What do we know if A - B = A?
+A - B = {x : x ∈ A ⋀ x ∉ B}
 
 
 
 
-What do we know if A - B = B - A?
 
-The sets are the same (think overlap to empty set)
 
-#dont do algebra on sets
+
 
 
 //////////////////////////////////////
@@ -100,22 +96,36 @@ The sets are the same (think overlap to empty set)
 ///////////////////////////////////////
 
 A = {1,3,7,10,11,12}
-
 B = {2,3,4,5,6,7}
-
 
 Find:
 
-A ⋃ B = {1,3,7,10,11,12} & {2,3,4,5,6,7}
-
+A ⋃ B = {1,3,7,10,11,12,2,4,5,6}
 A ⋂ B = {3,7}
-
 A - B = {1,10,11,12}
-
 B - A = {2,4,5,6}
 
 
+A - B = A - (A ⋂ B)
+
 //////////////////
+
+What do we know if A ⋂ B = A ⋃ B?
+
+ A must equal B
+
+
+What do we know if A - B = A?
+
+    A ⋂ B = ∅ (the empty set)
+
+
+What do we know if A - B = B - A?
+
+ if A = B
+
+/////////////////////////////////////
+
 
 Subset - A is a subset of B, written A ⊆ B, if
     all elements in A are also in B.
@@ -131,20 +141,19 @@ A = {1,3,4}
 
 B = {1,3,5,8}
 
---> is A a subset of B?
+--> is A a subset of B? no, because the 4 in A isn't in B
 
-no - the four in a is not on b
+
 
 A = {8,1,3}
 
 B = {1,3,5,8}
 
---> is A a subset of B?
+--> is A a subset of B? yes, all the elements in A are also in B
 
-yes, all the elements in a are from b
+
 
 //////////////////////////////////
-
 
 Quantifiers - helps describe all or some elements in a set
 
@@ -156,14 +165,14 @@ Quantifiers - helps describe all or some elements in a set
 
 Can we define whether set A is a subset of set B using quantifiers?
 
-A ⊆ B means ??
+A ⊆ B means ∀ x ∈ A → x ∈ B
 
-∀ x ∈ A __>: x ∈ B
+
 
 
 How could we define whether set A equals set B using quantifiers?
 
-(∀ x ∈ A __>: x ∈ B) ⋀ (∀ x ∈ B __>: x ∈ A)
+(∀ x ∈ A → x ∈ B) ⋀ (∀ x ∈ B → x ∈ A)
 
 
 ∀ ∃     ∈ ∉     ∅ ⋂ ⋃ ⊂ ⊆   ⋀ ⋁ ¬ →     ℕ ℤ     ≠ ≤ ≥
@@ -194,21 +203,22 @@ Example:
 
 A = {x : x ∈ ℕ ⋀ x^2 ≥ 25 }
 
-all natural numbers whose square is greater than 25
+    all natural numbers whose square is greater than or equal
+        to 25
+
 
 P(x) = x ∈ ℕ ⋀ x^2 ≥ 25
-    so A = {x : P(x) is true }
-
 
 What are these saying? Are they true?
 
-P(2) = F square is not greater than 25
-P(-6) = F -6 is not a natural number
-P(10) = T satisfies set
+P(2) = 2 ∈ ℕ ⋀ 2^2 ≥ 25 is false, since 4 is not >= 25
+P(-6) = -6 ∈ ℕ ⋀ (-6)^2 ≥ 25 is false since -6 isn't a natural number
+P(10) = true
 
 Is 2 in A? Is -6? Is 10?
 
-10
+10 is in A, the others aren't
+
 
 //////////////////////////////////////
 
@@ -233,7 +243,6 @@ r: Socrates is mortal
 
 
 p, q ⊢ r
-Can't draw any conclusions from propositional logic, turn to predicate logic
 
 
 
@@ -262,11 +271,11 @@ Example:
     Jill is taking: CIS 301, MATH 510, HIST 251, MUSIC 170
 
 
-    What is the value of C(Bob)? false, bob is not in 301
+    What is the value of C(Bob)? false (Bob isn't in CIS 301)
 
-    What is the value of C(Jill)? true, Jill is in 301
+    What is the value of C(Jill)? true (Jill is in CIS 301)
 
-    What is the value of C(Bob) ⋀ C(Jill)? False (standard and statement)
+    What is the value of C(Bob) ⋀ C(Jill)? false
 
 
 ////////////////
@@ -279,14 +288,13 @@ Berry(x): x is a berry
 Citrus(x): x is a citrus fruit
 Peel(x): x has a peel (that needs to be removed before eating)
 Seeds(x): x contains inedible seeds
-Bite(x): f is bite-sized
+Bite(x): x is bite-sized
 
-non-scientific berry classifications
-Berry(strawberry) - ya
-Citrus(strawberry) - ya
-Peel(strawberry) - nah
-Seeds(strawberry) - nah
-Bite(strawberry) - ya
+Berry(strawberry) -  true
+Citrus(strawberry) - false
+Peel(strawberry) - false
+Seeds(strawberry) - false
+Bite(strawberry) - true
 
 
 
@@ -294,8 +302,16 @@ Write each statement in English. Is each one true or false?
 
 ∀ x (Berry(x))
 
-for all fruits (domain), x is a berry // All fruits are berries - write it all out more naturally
-but this is false, there are fruits that are non-berry
+For all fruits x, x is a berry
+
+Try to write it like this: "All fruits are berries"
+
+This is false in our domain -- a banana is not a berry
+
+Berry(strawberry) ⋀ Berry(blueberry) ⋀ Berry(banana) ⋀
+    ... ⋀ Berry(apple)
+
+
     --> how could we express the same statement in our domain
     WITHOUT a quantifier?
 
@@ -306,74 +322,115 @@ but this is false, there are fruits that are non-berry
 
 ∃ x (Citrus(x) ⋀ Seeds(x))
 
-True, oranges : there esists a fruit that is both a citrus and has inedible seeds.
+There exists a fruit that is both citrus and has inedible seeds
+
+
+Or: "There is a fruit that is both citrus and has inedible seeds"
 
     --> how could we express the same statement in our domain
     WITHOUT a quantifier?
 
+true - an orange is citrus with inedible seeds
 
 
-
+(Citrus(strawberry) ⋀ Seeds(strawberry)) ⋁ (Citrus(blueberry) ⋀ Seeds(blueberry))
+    ⋁ ... ⋁ (Citrus(orange) ⋀ Seeds(orange))
 ///
 
 ∀ x (Berry(x) ⋀ Bite(x))
 
-strawberry
+All fruits are berries and (all fruits) are bite-sized
+
+false - an apple is not a berry (and is also not bite-sized)
 
 
 ///
 
 ∀ x (Berry(x) → Bite(x))
 
-all berries do be bite sizing maybe
-false - apples do exist. and other stuff.
+For all fruits that are berries, they are bite-sized
 
-vacuousliy true when the promise doe not come up.
+aim for this: "All berries are bite-sized"
+
+(Berry(strawberry) → Bite(strawberry)) ^ (Berry(blueberry) → Bite(blueberry))
+    ^ (Berry(orange) → Bite(orange))
+
+true
+
 ///
 
 ¬(∀ x Peel(x))
 
 Can you think of another way to write the same thing?
 
-not all fruits need to be peeled
+Not all fruits have to be peeled
 
-treu, for intance strawberrries.
+true - strawberries don't have to be peeled
 
 
+¬(Peel(strawberry) ^ Peel(blueberry) ^ ... ^ Peel(orange))
+
+!Peel(straw) V !Peel(blue) V .... V !Peel(orange)
+
+
+equivalent to:
+∃ x ¬Peel(x)
 
 ///
 
 ¬(∀ x (Seeds(x) → Citrus(x)))
 
+Not all fruits with inedible seeds are citrus
+
+to be true, need one fruit with inedible seeds that isn't citrus
+
+    true - an apple has inedible seeds but isn't citrus
 
 
 Can you think of another way to write the same thing?
+
+∃ x (Seeds(x) ^ ¬Citrus(x))
 
 ///
 
 ∀ x ¬Peel(x)
 
-not all fruits w edible deed are citru, like a Apple)
+All fruits don't need to be peeled
 
+false - bananas DO need to be peeled
+
+¬(∃ x Peel(x))
 
 ///
 
 ¬(∃ x Berry(x))
 
+¬∃ x - read as "there does not exist"
 
 
+there does not exist a berry
+
+false - strawberry is a berry
 
 ///
 
 ¬(∃ x (Peel(x) ⋀ Citrus(x)))
 
 
+There does not exist a fruit that you need to peel and is citrus
 
+false - orange needs to be peeled and is citrus
 
 ///
 
 ∃ x ¬(Peel(x) ⋀ Seeds(x))
 
+There exists a fruit that doesn't both need to be peeled and have seeds
+
+(or there exists a fruit that doesn't need to be peeled or doesn't have seeds)
+
+NO: There exists a fruit that doesn't need to be peeled and
+    doesn't have seeds
 
 
 
@@ -382,13 +439,26 @@ not all fruits w edible deed are citru, like a Apple)
 ∃ x (Citrus(x) → Berry(x))
 
 
+There exists a fruit and if that fruit is citrus, then it is a berry
+
+(Citrus(strawberry) → Berry(strawberry)) V ... V (Citrus(orange) → Berry(orange))
+
+
+this whole is true if we have any fruit that is NOT citrus
+
+
+probably meant: ∃ x (Citrus(x) ^ Berry(x))
+    (means: there is a fruit that is citrus and a berry)
 
 /////////////////
 
-For all: usually connect with...
+For all: usually connect with... ->
 
-There exists: usually connect with...
+There exists: usually connect with... ^ (AND)
 
+/////////////////
+
+stopped here - will continue on Tuesday
 
 //////////////////
 
