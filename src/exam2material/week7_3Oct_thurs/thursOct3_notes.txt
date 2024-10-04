@@ -55,11 +55,17 @@ What does this say? Is it true?
 
     ∀ x ∃ y (x^2 == y)
 
+    Read quantifiers like nested loops
+    - The square of an integer is also an integer.
+
 
 What does this say? Is it true?
 
     ∃ y ∀ x (x^2 == y)
 
+there is a fixed integer that is equal to the square of every integer...
+
+order matters in "fixing" the values that can be represented by the qualifier.
 
 ////////////////////////////////
 
@@ -116,7 +122,7 @@ Syntax:
 
 Proof(
     1 ( ∀ ((x: T) => Human(x)) )    by Premise,
-    2 Human(Socrates)               by ???
+    2 Human(Socrates)               by AllE
 )
 
 Note: This assumes "Socrates" and "Human" were both parameters
@@ -124,7 +130,7 @@ to our proof function:
 
 
 @pure def Example[T](Human: T => B @pure, Socrates: T)
-
+** takes in na predicate and returns a T/F Value Logika style
 
 
 ///////////////////////////////
@@ -144,9 +150,10 @@ First: consider these two statements:
 
 ∀ x (P(x) ⋀ Q(x))           (∀ x P(x)) ⋀ (∀ x Q(x))
 
-
+∀ x (P(x) ⋀ Q(x)) for all individuals P & Q are true
+(∀ x P(x)) ⋀ (∀ x Q(x)) for all individuals P is true and for all individuals Q is true
 are they equivalent?
-
+Yah
 how would we defend our position?
 
 
